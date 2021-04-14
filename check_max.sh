@@ -1,7 +1,6 @@
 #!/bin/bash
 
-FROM=`cat ./from`
-TO=`cat ./to`
+source getrange
 
 for (( i = FROM; i < TO; i++ )); do
 	gov=`cat /sys/devices/system/cpu/cpu$i/cpufreq/cpuinfo_max_freq`
